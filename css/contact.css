@@ -1,0 +1,28 @@
+.contact {
+  display: grid;
+  height: 75vh;
+  align-items: center;
+  justify-items: center;
+}
+
+.form {
+  width: 50%;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+
+.field label {
+  margin-bottom: 1rem;
+}
+
+.field :not(label) {
+  padding: 1rem;
+}
+
+textarea {
+  height: 18vh;
+}

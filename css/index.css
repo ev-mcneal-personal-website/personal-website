@@ -1,0 +1,35 @@
+/* 
+	styling for home page 
+*/
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 8fr;
+}
+
+/* style the video element so that it is behind all of the content  */
+.background-video {
+  position: fixed;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  opacity: 0.25;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3rem;
+  transform: translateY(-5vh);
+}
+
+.home__title {
+  font-size: 6rem;
+  margin-bottom: 4rem;
+}

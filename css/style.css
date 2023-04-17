@@ -1,0 +1,93 @@
+/*
+  base styles for all pages
+
+  main color: #303561
+  accent color: #8bcdc5
+
+*/
+
+/* add custom font  */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+/* universal reset  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* change color of text when highlighted   */
+::selection {
+  background: #8bcdc5;
+  color: #303561;
+}
+
+html {
+  /* make 1rem = 10px (assuming default browser font size is 16px) */
+  font-size: 62.5%;
+}
+
+body {
+  z-index: 10;
+  font-family: 'Space Grotesk', 'Arial', sans-serif;
+  font-size: 2rem;
+  background-image: linear-gradient(#474c7a 25%, #0d1136);
+  background-attachment: fixed;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 192rem;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+}
+
+.header__logo {
+  font-size: 4rem;
+  padding: 0.5rem;
+  color: #8bcdc5;
+  border: 5px solid #8bcdc5;
+  outline: 0 solid #8bcdc5;
+  transition: all 200ms ease-in;
+}
+
+.header__logo:hover {
+  border: 5px solid transparent;
+  outline: 10px solid transparent;
+  /* transform: scale(1.05); */
+}
+
+.header__nav {
+  align-self: center;
+}
+
+.header__links {
+  list-style-type: none;
+  display: inline-flex;
+}
+
+.header__links li {
+  margin-left: 4rem;
+}
+
+.header__links li a {
+  font-weight: bold;
+  padding: 0.5rem;
+  transition: all 200ms;
+}
+
+.header__links li a:not(.selected):hover,
+.selected {
+  border-bottom: 4px solid #8bcdc5;
+}
+
+.selected:hover {
+  border: transparent;
+}
